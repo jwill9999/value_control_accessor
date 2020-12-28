@@ -9,3 +9,29 @@
         (blur)="doBlur()"
     />
 </div>
+
+<!--
+
+================ [formControl]="controlOne" =======================
+
+Set this vale to equal the one in the formControl in ts file
+  public controlOne = new FormControl('');
+
+
+
+========== (input)="doInput()" (blur)="doBlur()" ===================
+
+
+
+ add these events and configure their actions from within the ts file.
+
+  doInput() {
+      this.onChange(this.controlOne.value);
+  }
+
+  doBlur() {
+      this.onTouched();
+  }
+
+
+ -->

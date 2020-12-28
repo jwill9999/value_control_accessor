@@ -1,27 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-  label = 'First Name';
-  type = 'text';
+export class HomeComponent {
+    label = 'First Name';
 
-  constructor(private fb: FormBuilder) { }
+    constructor(private fb: FormBuilder) {}
 
-  myform: FormGroup = this.fb.group({
-    firstname: ['', Validators.required],
-    lastname: ['', Validators.required]
-  });
+    myform: FormGroup = this.fb.group({
+        firstname: ['', Validators.required],
+        lastname: ['', Validators.required],
+    });
 
-  ngOnInit(): void {
-  }
-
-  onSubmit(){
-    console.log(this.myform.value);
-  }
-
+    onSubmit() {
+        console.log(this.myform.value);
+    }
 }
