@@ -1,15 +1,25 @@
 <h3>My control value accessor</h3>
 <form [formGroup]="myform" (ngSubmit)="onSubmit()">
-<app-input formControlName="firstname" [label]="label"  ></app-input>
-<div class="mt-3">
-  <label class="form-label">LastName</label>
-  <input type="text" class="form-control" formControlName="lastname" placeholder="Your last name here">
-</div>
+    <app-input formControlName="firstname" [label]="label"></app-input>
+    <div class="mt-3">
+        <label class="form-label">LastName</label>
+        <input
+            type="text"
+            class="form-control"
+            formControlName="lastname"
+            placeholder="Your last name here"
+        />
+    </div>
 
-<button class="btn btn-primary mt-3" type="submit" [disabled]="!myform.valid">Submit</button>
+    <button
+        class="btn btn-primary mt-3"
+        type="submit"
+        [disabled]="!myform.valid"
+    >
+        Submit
+    </button>
 </form>
 
 <h3 class="mt-5">Form results</h3>
-<pre>{{ myform.value| json }}</pre>
+<pre>{{ myform.value | json }}</pre>
 <p>Form Status: {{ myform.valid | json }}</p>
-
