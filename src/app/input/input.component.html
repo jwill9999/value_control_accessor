@@ -1,0 +1,11 @@
+<div class="mb-3">
+    <label class="form-label">{{ label }}</label>
+    <input
+        type="text"
+        class="form-control"
+        [formControl]="controlOne"
+        placeholder="Your first name here"
+        (input)="doInput()"
+        (blur)="doBlur()"
+    />
+</div>
